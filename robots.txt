@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aliza-consultancy.netlify.app/sitemap.xml
