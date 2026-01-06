@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aliza Consultancy | Digital Solutions</title>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("W011vkL_3bi89prK8");
+})();
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f9fafb;color:#333;line-height:1.6}
+
+/* Animations */
+@keyframes fadeUp {
+  from {opacity:0; transform: translateY(30px);}
+  to {opacity:1; transform: translateY(0);}
+}
+.animate {animation: fadeUp 1s ease forwards}
+
+/* Layout */
+header{background:linear-gradient(135deg,#2563eb,#1e40af);color:#fff;padding:70px 20px;text-align:center}
+header h1{font-size:38px;margin-bottom:10px}
+header p{font-size:18px;margin-bottom:20px}
+.btn{display:inline-block;padding:12px 24px;background:#fff;color:#1e40af;font-weight:bold;border-radius:6px;text-decoration:none}
+
+section{padding:60px 20px;max-width:1100px;margin:auto}
+.section-title{text-align:center;font-size:28px;margin-bottom:40px}
+
+.services,.pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card,.price-card{
+  background:#fff;padding:25px;border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.card:hover,.price-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+.card h3,.price-card h3{margin-bottom:10px;color:#1e40af}
+.about{text-align:center;max-width:800px;margin:auto}
+
+.pricing{background:#f1f5f9}
+.price{font-size:32px;font-weight:bold;margin:15px 0}
+.price-card ul{list-style:none;margin:20px 0}
+.price-card ul li{margin-bottom:10px}
+
+.popular{border:2px solid #1e40af;position:relative;transform:scale(1.05)}
+.badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:#1e40af;color:#fff;padding:6px 14px;
+  font-size:13px;border-radius:20px;font-weight:bold
+}
+
+/* Contact Form */
+.contact{background:#1e40af;color:#fff;padding:60px 20px}
+.contact-container{
+  max-width:600px;margin:auto;background:#fff;color:#333;
+  padding:30px;border-radius:12px
+}
+.contact-container h2{text-align:center;margin-bottom:20px;color:#1e40af}
+form input,form textarea{
+  width:100%;padding:12px;margin-bottom:15px;
+  border-radius:6px;border:1px solid #ccc;font-size:15px
+}
+form button{
+  width:100%;padding:12px;background:#1e40af;color:#fff;
+  border:none;border-radius:6px;font-size:16px;font-weight:bold;cursor:pointer
+}
+#success{color:green;text-align:center;margin-top:10px;display:none}
+
+footer{text-align:center;padding:15px;background:#111827;color:#9ca3af;font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="animate">
+<h1>Aliza Consultancy</h1>
+<p>Creative Digital Solutions to Grow Your Business</p>
+<a href="#contact" class="btn">Get Started</a>
+</header>
+
+<section class="animate">
+<h2 class="section-title">About Us</h2>
+<p class="about">
+Aliza Consultancy helps businesses build a strong online presence through design,
+technology, and digital marketing solutions.
+</p>
+</section>
+
+<section class="animate">
+<h2 class="section-title">Our Services</h2>
+<div class="services">
+<div class="card"><h3>Website Design & Development</h3><p>Responsive and modern websites.</p></div>
+<div class="card"><h3>Graphic Design</h3><p>Branding and marketing creatives.</p></div>
+<div class="card"><h3>Content Writing & Copywriting</h3><p>Content that converts.</p></div>
+<div class="card"><h3>Social Media Management</h3><p>Grow your brand online.</p></div>
+<div class="card"><h3>Video Editing & Animation</h3><p>Professional visual content.</p></div>
+</div>
+</section>
+
+<section class="pricing animate">
+<h2 class="section-title">Pricing Plans</h2>
+<div class="pricing-cards">
+<div class="price-card">
+<h3>Starter</h3>
+<p class="price">₹9,999</p>
+<ul><li>1–3 Page Website</li><li>Responsive Design</li><li>Basic SEO</li></ul>
+</div>
+
+<div class="price-card popular">
+<div class="badge">Most Popular</div>
+<h3>Business</h3>
+<p class="price">₹19,999</p>
+<ul><li>5–7 Page Website</li><li>Custom UI</li><li>Content Writing</li><li>Social Media Setup</li></ul>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<p class="price">₹34,999</p>
+<ul><li>Complete Website</li><li>Graphic & Video Content</li><li>Social Media Management</li></ul>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact animate">
+<div class="contact-container">
+<h2>Contact Us</h2>
+<form id="contact-form">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="tel" name="phone" placeholder="Phone Number">
+<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+<div id="success">Message sent successfully!</div>
+</form>
+</div>
+</section>
+
+<footer>
+© 2026 Aliza Consultancy. All rights reserved.
+</footer>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  emailjs.sendForm("service_6mqqsw6", "template_swpmet6", this)
+    .then(function(){
+      document.getElementById("success").style.display = "block";
+    }, function(error){
+      alert("Failed to send message");
+    });
+});
+</script>
+
+</body>
+</html>
